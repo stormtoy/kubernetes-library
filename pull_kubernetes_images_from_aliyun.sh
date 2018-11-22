@@ -9,6 +9,7 @@ KUBE_VERSION=v1.12.2
 KUBE_PAUSE_VERSION=3.1
 ETCD_VERSION=3.2.24
 DNS_VERSION=1.2.2
+FLANNEL_VERSION=v0.10.0-amd64
 
 GCR_URL=k8s.gcr.io
 ALIYUN_URL=registry.cn-hangzhou.aliyuncs.com/megalith
@@ -19,7 +20,8 @@ kube-controller-manager:${KUBE_VERSION}
 kube-apiserver:${KUBE_VERSION}
 pause:${KUBE_PAUSE_VERSION}
 etcd:${ETCD_VERSION}
-coredns:${DNS_VERSION})
+coredns:${DNS_VERSION}
+flannel:${FLANNEL_VERSION})
 
 
 for imageName in ${images[@]} ; do
